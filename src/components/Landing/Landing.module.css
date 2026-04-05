@@ -1,0 +1,103 @@
+/* ─── Landing shell ───────────────────────────────────────────────────────── */
+
+.landing {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /*
+   * Optical composition:
+   * padding-top nudges the name ~3vh below true center so it reads as
+   * "settled" rather than mechanically placed. This removes the "static
+   * test page" feel and grounds the composition.
+   */
+  padding-top: 6vh;
+
+  /*
+   * Atmosphere:
+   * Not a flat rectangle. The center is a warm, soft luminosity; edges
+   * recede very gently. The difference is ~5 luminosity steps — users
+   * will feel the depth before they notice it.
+   */
+  background:
+    radial-gradient(
+      ellipse 90% 75% at 50% 44%,
+      #fdfbf7 0%,
+      #f0ede6 100%
+    );
+
+  z-index: 10;
+}
+
+
+/* ─── Name row ────────────────────────────────────────────────────────────── */
+
+.nameRow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  user-select: none;
+}
+
+
+/* ─── Individual letter ───────────────────────────────────────────────────── */
+
+.letter {
+  display: inline-block;
+  font-family: var(--font-serif);
+
+  /*
+   * Title-card scale: deliberately NOT a hero headline.
+   * At 1440px this resolves to ~36px — present and elegant, never loud.
+   * Cormorant Garamond reads beautifully at this range.
+   */
+  font-size: clamp(1.65rem, 2.6vw, 2.2rem);
+  font-weight: 400;  /* Gloock only ships at 400 — its native weight */
+  font-style: normal;
+
+  /*
+   * Gloock's letterforms are more defined than Cormorant, so slightly
+   * tighter tracking keeps it from spreading too wide.
+   */
+  letter-spacing: 0.02em;
+  color: var(--fg);
+  line-height: 1;
+
+  will-change: transform, opacity;
+}
+
+
+/* ─── Word space ──────────────────────────────────────────────────────────── */
+
+.wordSpace {
+  display: inline-block;
+  /* Serif word space: narrower than sans at equivalent tracking */
+  width: clamp(0.3rem, 0.6vw, 0.45rem);
+}
+
+
+/* ─── Mobile ──────────────────────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .landing {
+    padding-top: 4vh;
+  }
+
+  .nameRow {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80vw;
+  }
+
+  .letter {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    letter-spacing: 0.03em;
+  }
+
+  .wordSpace {
+    width: 100%;
+    height: 0.2em;
+  }
+}

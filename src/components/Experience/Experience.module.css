@@ -1,0 +1,90 @@
+.experience {
+  min-height: calc(100vh - 64px);
+  padding: clamp(60px, 10vh, 100px) clamp(24px, 8vw, 100px);
+}
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.heading {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+  line-height: 1.05;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: var(--fg-secondary);
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
+/* Entry list */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.entry {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(24px, 5vw, 64px);
+  padding: 28px 0;
+  border-top: 1px solid #ebebeb;
+}
+
+.entry:last-child {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.entryMeta {
+  flex: 0 0 clamp(100px, 18vw, 160px);
+}
+
+.period {
+  font-size: 0.8rem;
+  color: var(--fg-tertiary);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.entryBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.role {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--fg);
+  letter-spacing: 0.01em;
+}
+
+.company {
+  font-size: 0.875rem;
+  color: var(--fg-secondary);
+}
+
+@media (max-width: 520px) {
+  .entry {
+    flex-direction: column;
+    gap: 6px;
+    padding: 24px 0;
+  }
+}

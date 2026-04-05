@@ -1,0 +1,159 @@
+/* =========================================================
+   About — editorial floating layout
+   Mimics the Adriano Smith reference: portrait blob left,
+   large display name right, open air throughout.
+   ========================================================= */
+
+/* ---- Blob morphing keyframes ---- */
+
+@keyframes blobMorph {
+  0%, 100% { border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%; }
+  20%       { border-radius: 50% 50% 65% 35% / 55% 45% 32% 68%; }
+  40%       { border-radius: 38% 62% 48% 52% / 65% 35% 58% 42%; }
+  60%       { border-radius: 55% 45% 38% 62% / 40% 60% 52% 48%; }
+  80%       { border-radius: 46% 54% 58% 42% / 52% 48% 44% 56%; }
+}
+
+/* ---- Section ---- */
+
+.about {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(80px, 12vh, 120px) clamp(40px, 8vw, 120px);
+}
+
+/* ---- Inner row ---- */
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(64px, 9vw, 120px);
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* ---- Portrait wrapper (receives mouse parallax via framer-motion style) ---- */
+
+.portraitWrap {
+  flex: 0 0 auto;
+  width: clamp(260px, 32vw, 400px);
+  aspect-ratio: 1 / 1.1;
+}
+
+/* ---- Blob frame: the morphing shape ---- */
+
+.blobFrame {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation: blobMorph 11s ease-in-out infinite;
+
+  /* Dark editorial border that morphs with the shape */
+  box-shadow: 0 0 0 3px rgba(26, 23, 20, 0.72);
+}
+
+/* ---- Portrait image ---- */
+
+.portraitImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: grayscale(100%);
+}
+
+/* ---- Text panel ---- */
+
+.textPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+/* ---- Name ---- */
+
+.name {
+  font-size: clamp(3rem, 5.5vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.0;
+  color: var(--fg);
+  margin-bottom: clamp(28px, 4vh, 44px);
+}
+
+/* ---- Bio ---- */
+
+.bio {
+  font-size: clamp(0.88rem, 1.05vw, 0.98rem);
+  font-weight: 400;
+  line-height: 1.85;
+  color: var(--fg-secondary);
+  max-width: 400px;
+  margin-bottom: clamp(36px, 5vh, 52px);
+}
+
+/* ---- Social icon buttons ---- */
+
+.socialLinks {
+  display: flex;
+  gap: 10px;
+}
+
+.iconBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background: var(--fg);
+  color: var(--bg);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.iconBtn:hover {
+  opacity: 0.72;
+  transform: translateY(-1px);
+}
+
+/* ============================
+   Tablet / Mobile stacking
+   ============================ */
+
+@media (max-width: 760px) {
+  .about {
+    align-items: flex-start;
+    padding: clamp(60px, 10vh, 80px) clamp(28px, 6vw, 60px) 80px;
+  }
+
+  .inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .portraitWrap {
+    width: clamp(200px, 60vw, 320px);
+  }
+
+  .textPanel {
+    align-items: center;
+    text-align: center;
+  }
+
+  .bio {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: clamp(2.6rem, 11vw, 3.4rem);
+  }
+}
