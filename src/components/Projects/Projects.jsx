@@ -7,6 +7,7 @@ import jarvisImg      from '../../assets/projects/jarvis.png'
 import falconImg      from '../../assets/projects/falconU.png'
 import chipkingIMg   from '../../assets/projects/chipking.png'  
 import gtzanImg      from '../../assets/projects/mel.png'
+import sotdImg      from '../../assets/projects/sotd.png'
 const PROJECTS = [
   {
     id: 'elara',
@@ -67,6 +68,16 @@ const PROJECTS = [
     tags: ['React', 'Node.js', 'Python', 'FastAPI', 'AWS'],
     github: '#',
     image: gtzanImg
+  },
+  {
+    id: 'sotd',
+    name: 'Song of the Day',
+    headline: 'A platform for discovering and sharing daily music recommendations.',
+    description:
+      'Built with React and Node.js, SOTD provides a comprehensive solution for music discovery and sharing.',
+    tags: ['React', 'Node.js', 'Python', 'FastAPI', 'AWS'],
+    github: '#',
+    image: sotdImg
   }
 ]
 
