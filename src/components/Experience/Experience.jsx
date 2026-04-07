@@ -18,10 +18,10 @@ import jumboLogo from '../../assets/experience/jumbo.png'
 import { p } from 'framer-motion/client'
 
 const SKILLS = [
-  { category: 'Languages',     items: ['Python', 'C++', 'JavaScript', 'SQL', 'Swift'] },
-  { category: 'Frameworks & Libraries',    items: ['React', 'Next.js', 'FastAPI', 'Django', 'LangChain/LangGraph', 'PyTorch', 'Pydantic','Pipecat'] },
-  { category: 'Infrastructure/DevOps', items: ['AWS (EC2, ECS, Fargate, S3, RDS)', 'VPC Networking', 'IAM',, 'Docker', 'Git', 'CI/CD'] },
-  { category: 'Databases & Vector',     items: ['PostgreSQL (pgvector)', 'Supabase', 'Faiss', 'MySQL', 'Redis'] },
+  { category: 'Languages', items: ['Python', 'C++', 'JavaScript', 'SQL', 'Swift'] },
+  { category: 'Frameworks & Libraries', items: ['React', 'Next.js', 'FastAPI', 'Django', 'LangChain / LangGraph', 'PyTorch', 'Pydantic', 'Pipecat'] },
+  { category: 'Infrastructure & DevOps', items: ['AWS (EC2, ECS, Fargate, S3, RDS)', 'VPC Networking', 'IAM', 'Docker', 'Git', 'CI/CD (GitHub Actions)'] },
+  { category: 'Databases & Vector', items: ['PostgreSQL (pgvector)', 'Supabase', 'FAISS', 'MySQL', 'Redis'] },
 ]
 
 const EXPERIENCE = [
@@ -45,7 +45,7 @@ const EXPERIENCE = [
     id: 'tufts',
     company: 'Tufts University',
     role: 'AI Research Assistant',
-    period: 'Sep 2025 – present',
+    period: 'Sep 2025 – Present',
     location: 'Medford, MA',
     logo: tuftsLogo,
     bullets: [
@@ -84,7 +84,7 @@ const EXPERIENCE = [
   },
   {
     id: 'jumbo',
-    company: 'Jummbo Code',
+    company: 'Jumbo Code',
     role: 'Full-Stack Engineer',
     period: 'Sep 2023 – May 2024',
     location: 'Medford, MA',

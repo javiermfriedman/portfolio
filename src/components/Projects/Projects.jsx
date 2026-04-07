@@ -16,7 +16,7 @@ const PROJECTS = [
     name: 'E.L.A.R.A.',
     headline: 'Enhanced Language Acquisition & Response Agent',
     description:
-        'A full-stack app for deploying configurable voice AI agents on live outbound phone calls, powered by real-time speech-to-text, LLM, and text-to-speech pipelines over WebSockets, with a mission-control UI for launching calls and replaying recordings',
+        'A full-stack platform for deploying configurable voice AI agents on live outbound phone calls, powered by real-time STT → LLM → TTS pipelines over WebSockets, with a mission-control interface for launching calls and replaying recordings',
     tags: ['FastAPI', 'React', 'Twilio', 'Pipecat', 'Deepgram', 'ElevenLabs', 'OpenAI','WebSockets', 'JWT'],
     github: 'https://github.com/javiermfriedman/E.L.A.R.A',
     image: elaraImg,
@@ -26,7 +26,7 @@ const PROJECTS = [
     name: 'D.E.L.P.H.I.',
     headline: 'Daily Elocution & Lexical Processing Heuristic Intelligence',
     description:
-      'A full-stack word-of-the-day app with a web UI for browsing past words, scheduling upcoming ones (either manually or via an LLM-powered “Oracle” that generates batches), and a daily GitHub Action that delivers each word to WhatsApp',
+      'A full-stack word-of-the-day app with a web UI for browsing past words, scheduling upcoming ones (either manually or via an LLM-powered “Oracle” that generates batches), and a daily GitHub Action that delivers each word via WhatsApp',
     tags: ['LangChain','LangGraph','Supabase', 'FastAPI', 'Uvicorn', 'GitHub Actions', 'Docker','React', 'Twilio'],
     github: 'https://github.com/javiermfriedman/D.E.L.P.H.I',
     demo: 'https://youtu.be/UiADcmmo-nc',
@@ -39,7 +39,7 @@ const PROJECTS = [
     description:
       'A personal AI assistant for everyday task handling (calendar, email, and messaging) that you can spin up locally with a cinematic ignition sequence and a voice modeled after J.A.R.V.I.S. from Iron Man 2',
     tags: ['Pipecat', 'Deepgram', 'OpenAI', 'ElevenLabs', 'Silero', 'RTVI','WebRTC', 'FastAPI','React', 'Vite', 'Google APIs', 'Twilio',],
-    github: '#',
+    github: 'https://github.com/javiermfriedman/J.A.R.V.I.S',
     demo: 'https://youtu.be/XrMCy3w5bsM',
     image: jarvisImg
   },
@@ -48,10 +48,9 @@ const PROJECTS = [
     name: 'Falcon University',
     headline: 'AI-powered university platform',
     description:
-      'A university-facing system where staff define and maintain academic program requirements, students engage in guided conversations with an AI agent to explore programs and assess eligibility, and staff review both programs and eligibility conversations from a centralized platform',
+      'A university-facing platform where staff define and manage academic program requirements, students engage in guided conversations with an AI agent to explore programs and assess eligibility, and staff review both programs and eligibility conversations from a centralized interface',
     tags: ['Django', 'Gunicorn', 'PostgreSQL', 'LangGraph', 'LangChain','LangSmith', 'pypdf','Pydantic','RAG','React', 'Vite', 'Docker','OpenAI API'],
     github: 'https://github.com/javiermfriedman/Falcon_University',
-    live: 'https://youtu.be/XrMCy3w5bsM',
     image: falconImg
   },
   {
@@ -59,7 +58,7 @@ const PROJECTS = [
     name: 'ChipKing',
     headline: 'Who is the best poker player? An app to find out.',
     description:
-      'An iOS app for tracking poker series over time: you run multiple series, add players, log games and buy-ins, and see standings and how performance changes.',
+      'An iOS app for tracking poker series over time: create series, add players, log games and buy-ins, and analyze standings and performance trends',
     tags: ['Swift', 'iOS', 'App Store Connect', 'SwiftUI', 'UIKit', 'PhotosUI', 'Codable','Xcode', 'MVVM'],
     github: 'https://github.com/javiermfriedman/ChipKing',
     image: chipkingIMg
@@ -69,8 +68,8 @@ const PROJECTS = [
     name: 'Song Genre Classifier',
     headline: 'Deep learning + music = the future',
     description:
-      'A Convolutional Neural Network trained on the GTZAN dataset (30-second song clips) to predict music genre',
-    tags: ['TensorFlow(Keras)', 'Adam', 'scikit-learn', 'Librosa', 'NumPy', 'Pandas', 'Matplotlib', 'Seaborn', 'Supervised learning', 'Regularization'],
+      'A convolutional neural network trained on the GTZAN dataset (30-second audio clips) to classify music genres',
+    tags: ['TensorFlow (Keras)', 'Adam', 'scikit-learn', 'Librosa', 'NumPy', 'Pandas', 'Matplotlib', 'Seaborn', 'Supervised learning', 'Regularization'],
     github: 'https://github.com/javiermfriedman/SongGenreClassifier',
     image: gtzanImg
   },
@@ -79,8 +78,8 @@ const PROJECTS = [
     name: 'Song of the Day',
     headline: 'A platform for discovering and sharing daily music recommendations.',
     description:
-      'An iOS application (and home-screen widget) that presents one featured track per day with links to open it on major streaming platforms, supported by a backend with tooling and automation to ingest, store, and maintain the catalog over time.',
-    tags: ['SwiftUI', 'UIKit', 'Foundation', 'WidgetKit', 'Python', 'Supabase', 'Pandas', 'Supabase', 'Spotify Web API', 'GitHub Actions'],
+      'An iOS application (and home-screen widget) that presents one featured track per day with links to open it across major streaming platforms, supported by backend tooling and automation to ingest, store, and maintain the catalog over time',
+    tags: ['SwiftUI', 'UIKit', 'Foundation', 'WidgetKit', 'Python', 'Supabase', 'Pandas', 'Spotify Web API', 'GitHub Actions'],
     github: 'https://github.com/javiermfriedman/SOTD',
     image: sotdImg
   },
@@ -90,7 +89,7 @@ const PROJECTS = [
     headline: 'A platform for discovering and sharing daily music recommendations.',
     description:
       'A 2D top-down Unity game where you play a black cat in a graveyard, using ghost powers to slip through walls, sneak past enemies, and collect fragments to advance the story.',
-    tags: ['Unity (2D)', 'C#', 'Unity UI (uGUI)', 'TextMesh Pro', '2D Tilemaps', 'Physics 2D'],
+    tags: ['Unity (2D)', 'C#', 'Unity UI (uGUI)', 'TextMesh Pro', '2D Tilemaps', 'Physics 2D'],
     github: 'https://github.com/javiermfriedman/ShadowClaw',
     demo: 'https://www.youtube.com/watch?v=un1I_a93Lpg',
     live: 'https://ellavoorhees1.wixsite.com/my-site',
