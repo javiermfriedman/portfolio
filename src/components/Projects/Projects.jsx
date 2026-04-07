@@ -45,7 +45,7 @@ const PROJECTS = [
     headline: 'AI-powered university platform',
     description:
       'A university-facing system where staff define and maintain academic program requirements, students engage in guided conversations with an AI agent to explore programs and assess eligibility, and staff review both programs and eligibility conversations from a centralized platform',
-    tags: ['Django', 'Gunicorn', 'PostgreSQL', 'LangGraph', 'LangChain','LangSmith', 'pypdf','Pydantic','React', 'Vite', 'Docker','OpenAI API'],
+    tags: ['Django', 'Gunicorn', 'PostgreSQL', 'LangGraph', 'LangChain','LangSmith', 'pypdf','Pydantic','RAG','React', 'Vite', 'Docker','OpenAI API'],
     github: 'https://github.com/javiermfriedman/Falcon_University',
     image: falconImg
   },

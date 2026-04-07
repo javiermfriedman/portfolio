@@ -19,9 +19,9 @@ import { p } from 'framer-motion/client'
 
 const SKILLS = [
   { category: 'Languages',     items: ['Python', 'C++', 'JavaScript', 'SQL', 'Swift'] },
-  { category: 'Frameworks',    items: ['React', 'Next.js', 'FastAPI', 'Django', 'LangChain/LangGraph', 'PyTorch', 'Pipecat'] },
-  { category: 'Cloud & Tools', items: ['AWS', 'Vercel', 'Docker'] },
-  { category: 'Databases',     items: ['PostgreSQL', 'MySQL', 'Supabase', 'Redis'] },
+  { category: 'Frameworks & Libraries',    items: ['React', 'Next.js', 'FastAPI', 'Django', 'LangChain/LangGraph', 'PyTorch', 'Pydantic','Pipecat'] },
+  { category: 'Infrastructure/DevOps', items: ['AWS (EC2, ECS, Fargate, S3, RDS)', 'VPC Networking', 'IAM',, 'Docker', 'Git', 'CI/CD'] },
+  { category: 'Databases & Vector',     items: ['PostgreSQL (pgvector)', 'Supabase', 'Faiss', 'MySQL', 'Redis'] },
 ]
 
 const EXPERIENCE = [
