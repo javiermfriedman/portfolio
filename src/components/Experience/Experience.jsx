@@ -18,10 +18,10 @@ import jumboLogo from '../../assets/experience/jumbo.png'
 import { p } from 'framer-motion/client'
 
 const SKILLS = [
-  { category: 'Languages',     items: ['Python', 'TypeScript', 'Java', 'C++'] },
-  { category: 'Frameworks',    items: ['Next.js', 'React Native', 'Node.js', 'FastAPI'] },
+  { category: 'Languages',     items: ['Python', 'C++', 'JavaScript', 'SQL', 'Swift'] },
+  { category: 'Frameworks',    items: ['React', 'Next.js', 'FastAPI', 'Django', 'LangChain/LangGraph', 'PyTorch', 'Pipecat'] },
   { category: 'Cloud & Tools', items: ['AWS', 'Vercel', 'Docker'] },
-  { category: 'Databases',     items: ['PostgreSQL', 'MongoDB'] },
+  { category: 'Databases',     items: ['PostgreSQL', 'MySQL', 'Supabase', 'Redis'] },
 ]
 
 const EXPERIENCE = [
@@ -44,7 +44,7 @@ const EXPERIENCE = [
   {
     id: 'tufts',
     company: 'Tufts University',
-    role: 'Research Assistant',
+    role: 'AI Research Assistant',
     period: 'Sep 2025 – present',
     location: 'Medford, MA',
     logo: tuftsLogo,
@@ -58,7 +58,7 @@ const EXPERIENCE = [
   {
     id: 'cp',
     company: 'Core Perform',
-    role: 'AI engineer intern',
+    role: 'AI Engineer Intern',
     period: 'Aug 2025 – Dec 2025',
     location: 'Medford, MA',
     logo: cpLogo,
@@ -85,7 +85,7 @@ const EXPERIENCE = [
   {
     id: 'jumbo',
     company: 'Jummbo Code',
-    role: 'Research Assistant',
+    role: 'Full-Stack Engineer',
     period: 'Sep 2023 – May 2024',
     location: 'Medford, MA',
     logo: jumboLogo,
@@ -144,7 +144,7 @@ export default function Experience() {
 
         <div className={styles.header}>
           <h1 className={styles.heading}>Experience</h1>
-          <p className={styles.subtext}>A timeline of where I've worked and what I've built.</p>
+          <p className={styles.subtext}>A few chapters from the path that brought me here.</p>
         </div>
 
         <div className={styles.body}>

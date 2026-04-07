@@ -81,7 +81,7 @@ function SpotifyIcon() {
 
 const SOCIAL_LINKS = [
   { label: 'GitHub',    href: 'https://github.com/javiermfriedman',                          Icon: GitHubIcon,    external: true  },
-  { label: 'LinkedIn',  href: 'www.linkedin.com/in/javier-friedman-ab08112a9',                     Icon: LinkedInIcon,  external: true  },
+  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/javier-friedman-ab08112a9',                     Icon: LinkedInIcon,  external: true  },
   { label: 'Goodreads', href: 'https://www.goodreads.com/user/show/181135757-javi-friedman',                       Icon: GoodreadsIcon, external: true  },
   { label: 'Spotify',   href: 'https://open.spotify.com/user/javier.friedman85?si=b04d412187b6427c',               Icon: SpotifyIcon,   external: true  },
   { label: 'Email',     href: 'mailto:hello@javiermfriedman.com',                            Icon: EmailIcon,     external: false },

@@ -14,9 +14,9 @@ const PROJECTS = [
     name: 'E.L.A.R.A.',
     headline: 'Enhanced Language Acquisition & Response Agent',
     description:
-      'Built with FastAPI, Twilio, Deepgram, ElevenLabs, OpenAI, and React. Designed for low-latency conversational systems and mission-control style orchestration.',
-    tags: ['FastAPI', 'React', 'Twilio', 'OpenAI', 'Deepgram', 'ElevenLabs'],
-    github: '#',
+        'A full-stack app for deploying configurable voice AI agents on live outbound phone calls, powered by real-time speech-to-text, LLM, and text-to-speech pipelines over WebSockets, with a mission-control UI for launching calls and replaying recordings',
+    tags: ['FastAPI', 'React', 'Twilio', 'Pipecat', 'Deepgram', 'ElevenLabs', 'OpenAI','WebSockets', 'JWT'],
+    github: 'https://github.com/javiermfriedman/E.L.A.R.A',
     image: elaraImg,
   },
   {
@@ -24,9 +24,9 @@ const PROJECTS = [
     name: 'D.E.L.P.H.I.',
     headline: 'Daily Elocution & Lexical Processing Heuristic Intelligence',
     description:
-      'An LLM-powered full-stack application designed around ritual, memory, and language learning.',
-    tags: ['React', 'FastAPI', 'LangChain', 'GitHub Actions', 'WhatsApp'],
-    github: '#',
+      'A full-stack word-of-the-day app with a web UI for browsing past words, scheduling upcoming ones (either manually or via an LLM-powered “Oracle” that generates batches), and a daily GitHub Action that delivers each word to WhatsApp',
+    tags: ['LangChain','LangGraph','Supabase', 'FastAPI', 'Uvicorn', 'GitHub Actions', 'Docker','React', 'Twilio'],
+    github: 'https://github.com/javiermfriedman/D.E.L.P.H.I',
     image: delphiImg
   },
   {
@@ -34,39 +34,39 @@ const PROJECTS = [
     name: 'J.A.R.V.I.S.',
     headline: 'Just A Rather Very Intelligent System',
     description:
-      'Python/FastAPI backend powered by Pipecat framework. You can spin it up locally with a single terminal alias, speak to it in real time, and have it manage your calendar, inbox, and (soon) send messages on your behalf via Twilio — all through natural conversation',
-    tags: ['Python', 'RAG', 'PostgreSQL', 'FastAPI', 'AWS'],
+      'A personal AI assistant for everyday task handling (calendar, email, and messaging) that you can spin up locally with a cinematic ignition sequence and a voice modeled after J.A.R.V.I.S. from Iron Man 2',
+    tags: ['Pipecat', 'Deepgram', 'OpenAI', 'ElevenLabs', 'Silero', 'RTVI','WebRTC', 'FastAPI','React', 'Vite', 'Google APIs', 'Twilio',],
     github: '#',
     image: jarvisImg
   },
   {
     id: 'falcon',
     name: 'Falcon University',
-    headline: 'A HIPAA-compliant AI system for matching patients to clinical studies.',
+    headline: 'AI-powered university platform',
     description:
-      'Built to ingest structured and unstructured medical data and determine trial eligibility with high accuracy.',
-    tags: ['Python', 'RAG', 'PostgreSQL', 'FastAPI', 'AWS'],
-    github: '#',
+      'A university-facing system where staff define and maintain academic program requirements, students engage in guided conversations with an AI agent to explore programs and assess eligibility, and staff review both programs and eligibility conversations from a centralized platform',
+    tags: ['Django', 'Gunicorn', 'PostgreSQL', 'LangGraph', 'LangChain','LangSmith', 'pypdf','Pydantic','React', 'Vite', 'Docker','OpenAI API'],
+    github: 'https://github.com/javiermfriedman/Falcon_University',
     image: falconImg
   },
   {
     id: 'chipking',
     name: 'ChipKing',
-    headline: 'A platform for managing and optimizing chip designs.',
+    headline: 'Who is the best poker player? An app to find out.',
     description:
-      'Built with React and Node.js, ChipKing provides a comprehensive solution for chip design and optimization.',
-    tags: ['React', 'Node.js', 'Python', 'FastAPI', 'AWS'],
-    github: '#',
+      'An iOS app for tracking poker series over time: you run multiple series, add players, log games and buy-ins, and see standings and how performance changes.',
+    tags: ['Swift', 'iOS', 'App Store Connect', 'SwiftUI', 'UIKit', 'PhotosUI', 'Codable','Xcode', 'MVVM'],
+    github: 'https://github.com/javiermfriedman/ChipKing',
     image: chipkingIMg
   },
   {
     id: 'gtzan',
     name: 'Song Genre Classifier',
-    headline: 'A platform for managing and optimizing chip designs.',
+    headline: 'Deep learning + music = the future',
     description:
-      'Built with React and Node.js, ChipKing provides a comprehensive solution for chip design and optimization.',
-    tags: ['React', 'Node.js', 'Python', 'FastAPI', 'AWS'],
-    github: '#',
+      'A Convolutional Neural Network trained on the GTZAN dataset (30-second song clips) to predict music genre',
+    tags: ['TensorFlow(Keras)', 'Adam', 'scikit-learn', 'Librosa', 'NumPy', 'Pandas', 'Matplotlib', 'Seaborn', 'Supervised learning', 'Regularization'],
+    github: 'https://github.com/javiermfriedman/SongGenreClassifier',
     image: gtzanImg
   },
   {
@@ -74,13 +74,12 @@ const PROJECTS = [
     name: 'Song of the Day',
     headline: 'A platform for discovering and sharing daily music recommendations.',
     description:
-      'Built with React and Node.js, SOTD provides a comprehensive solution for music discovery and sharing.',
-    tags: ['React', 'Node.js', 'Python', 'FastAPI', 'AWS'],
-    github: '#',
+      'An iOS application (and home-screen widget) that presents one featured track per day with links to open it on major streaming platforms, supported by a backend with tooling and automation to ingest, store, and maintain the catalog over time.',
+    tags: ['SwiftUI', 'UIKit', 'Foundation', 'WidgetKit', 'Python', 'Supabase', 'Pandas', 'Supabase', 'Spotify Web API', 'GitHub Actions'],
+    github: 'https://github.com/javiermfriedman/SOTD',
     image: sotdImg
   }
 ]
-
 export default function Projects() {
   return (
     <section className={styles.projects}>
