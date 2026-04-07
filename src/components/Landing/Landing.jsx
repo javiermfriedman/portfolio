@@ -11,7 +11,7 @@ const NAME = 'Javier Friedman'
 const INITIAL_DELAY   = 0.1    // almost immediate — barely a breath
 const STAGGER         = 0.042  // quick cadence between letters
 const LETTER_DURATION = 0.35   // fast, clean reveal per letter
-const HOLD_AFTER_MS   = 1800   // hold: the name sits, breathes, then exits
+const HOLD_AFTER_MS   = 1000   // hold: the name sits, breathes, then exits
 
 const REVEAL_COMPLETE_MS =
   (INITIAL_DELAY + (NAME.length - 1) * STAGGER + LETTER_DURATION) * 1000
