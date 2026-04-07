@@ -87,7 +87,7 @@ export default function Projects() {
         <div className={styles.header}>
           <h1 className={styles.heading}>Projects</h1>
           <p className={styles.subtext}>
-            A selection of products and systems I've designed and built.
+            A small collection of things I felt compelled to build.
           </p>
         </div>
 

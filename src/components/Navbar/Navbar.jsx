@@ -15,13 +15,7 @@ export default function Navbar({ activePage, onNavigate }) {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
     >
-      <button
-        className={styles.brand}
-        onClick={() => onNavigate('about')}
-        aria-label="Go to About"
-      >
-        Javier Friedman
-      </button>
+      <img src="/portfolio_favicon.png" alt="Javier Friedman" className={styles.brandLogo} />
 
       <nav className={styles.nav} aria-label="Main navigation">
         {NAV_LINKS.map(({ id, label }) => (
