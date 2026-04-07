@@ -34,10 +34,10 @@ const EXPERIENCE = [
     logo: sarviaLogo,
     bullets: [
     'At Sarvia, I worked as a full-stack software engineer with a primary focus on applied AI and backend systems, taking significant ownership over core platform features from early design through production iteration.',
-    'I built the patient-to-trial matching system end to end, designing a workflow that ingested complex patient histories along with both structured and unstructured electronic health record data, then evaluated them against clinical trial eligibility criteria to identify strong candidate matches',
+    'I built the patient-to-trial matching system end to end, designing a workflow that ingested complex (structured and unstructured) patient electronic health records, then evaluated them against clinical trial eligibility criteria to identify strong candidate matches.',
     'I built the frontend, backend services, APIs, and AWS-backed infrastructure for this workflow.',    
     'I optimized Sarvia’s real-time voice AI screening agent, reducing end-to-end latency by 35% through bidirectional WebSocket audio streaming, low-latency model selection, improved VAD endpointing, and deferred background processing.',
-    'I also expanded the voice agent’s MCP tool layer with actions such as ending calls, handling multilingual interactions, checking clinic calendar availability, scheduling appointments, and sending follow-up emails, making the system substantially more capable in real-world workflows.',
+    'I also expanded the voice agent’s MCP tool layer with actions such as ending calls, handling multilingual interactions, checking clinic calendar availability, scheduling appointments, and sending follow-up emails.',
     'I participated in product pilots and business-facing meetings, using user feedback to inform product and engineering decisions.',
     ],
   },
@@ -49,9 +49,9 @@ const EXPERIENCE = [
     location: 'Medford, MA',
     logo: tuftsLogo,
     bullets: [
-    'I collaborated with a faculty-led research team of PhD and graduate students at the Tufts’ Liulab to architect data infrastructure for Seasonal-to-Subseasonal (S2S) extreme weather predictive modeling.',
-    'I engineered a high-dimensional ETL pipeline in Python using Xarray and Dask to ingest, preprocess, and normalize 63 years (1960–2023) of global geospatial climate data, generating standardized datasets for downstream deep learning workflows.',
-    'I validated label integrity through spatiotemporal analysis, benchmarking extreme-event labels against historical meteorological records and quantifying agreement via Precision, Recall, and F1-score metrics.',
+    'I collaborated with a faculty-led research team of PhD and graduate students at the Tufts Liulab to develop a benchmark for Seasonal-to-Subseasonal (S2S) extreme weather prediction.',
+    'I engineered a high-dimensional ETL pipeline in Python using Xarray and Dask to process 63 years (1960–2023) of global geospatial climate data, producing standardized datasets for downstream deep learning workflows.',
+    'I validated label integrity through spatiotemporal analysis, benchmarking extreme-event labels against historical meteorological records and quantifying correspondence via Precision, Recall, and F1-score metrics.',
     'I leveraged the Tufts High-Performance Computing (HPC) cluster to execute large-scale, GPU-accelerated parallel computations.',
     ],
   },
@@ -91,7 +91,7 @@ const EXPERIENCE = [
     logo: jumboLogo,
     bullets: [
     'As a full-stack engineer at Jumbo Code, I helped build a comprehensive internal website for a local nonprofit as part of the organization’s pro bono software initiative.',
-    'I collaborated cross-functionally with designers, developers, and project managers in an agile, sprint-based workflow to ensure cohesive design, functionality, and on-time delivery.',
+    'I collaborated with designers, developers, and project managers in an agile, sprint-based workflow to deliver cohesive, functional features on schedule.',
     'I built and integrated features across a React frontend and Django backend, working in a shared Git-based codebase to support collaborative full-stack development.',
     ],
   },
@@ -104,8 +104,8 @@ const EXPERIENCE = [
     logo: paviaLogo,
     bullets: [
     'As a Data Science Fellow in Tufts Global Education’s study abroad program in Pavia, Italy, I engaged in a mentored academic experience combining technical coursework with immersive study of Italian language and culture.',
-    'I developed a foundation in machine learning by working with supervised and unsupervised methods, including regression models and clustering techniques, to analyze structured datasets and understand model behavior.',
-    'Through this experience, I strengthened my ability to learn and apply technical concepts in an international setting while adapting to a new academic and cultural environment.',
+    'I built a foundation in machine learning through hands-on work with introductory supervised and unsupervised methods, including regression, classification, and clustering.',
+    'This experience strengthened my ability to learn quickly, adapt to new environments, and apply technical concepts in an international academic setting.',
     ],
   },
   {

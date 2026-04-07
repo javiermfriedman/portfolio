@@ -22,17 +22,6 @@ const PROJECTS = [
     image: elaraImg,
   },
   {
-    id: 'delphi',
-    name: 'D.E.L.P.H.I.',
-    headline: 'Daily Elocution & Lexical Processing Heuristic Intelligence',
-    description:
-      'A full-stack word-of-the-day app with a web UI for browsing past words, scheduling upcoming ones (either manually or via an LLM-powered “Oracle” that generates batches), and a daily GitHub Action that delivers each word via WhatsApp',
-    tags: ['LangChain','LangGraph','Supabase', 'FastAPI', 'Uvicorn', 'GitHub Actions', 'Docker','React', 'Twilio'],
-    github: 'https://github.com/javiermfriedman/D.E.L.P.H.I',
-    demo: 'https://youtu.be/UiADcmmo-nc',
-    image: delphiImg
-  },
-  {
     id: 'jarvis',
     name: 'J.A.R.V.I.S.',
     headline: 'Just A Rather Very Intelligent System',
@@ -42,6 +31,17 @@ const PROJECTS = [
     github: 'https://github.com/javiermfriedman/J.A.R.V.I.S',
     demo: 'https://youtu.be/XrMCy3w5bsM',
     image: jarvisImg
+  },
+  {
+    id: 'delphi',
+    name: 'D.E.L.P.H.I.',
+    headline: 'Daily Elocution & Lexical Processing Heuristic Intelligence',
+    description:
+      'A full-stack word-of-the-day app with a web UI for browsing past words, scheduling upcoming ones (either manually or via an LLM-powered “Oracle” that generates batches), and a daily GitHub Action that delivers each word via WhatsApp',
+    tags: ['LangChain','LangGraph','Supabase', 'FastAPI', 'Uvicorn', 'GitHub Actions', 'Docker','React', 'Twilio'],
+    github: 'https://github.com/javiermfriedman/D.E.L.P.H.I',
+    demo: 'https://youtu.be/UiADcmmo-nc',
+    image: delphiImg
   },
   {
     id: 'falcon',
@@ -103,6 +103,7 @@ const PROJECTS = [
       'Spent more time picking fonts than sleeping. Rebuilt it four times. Told myself it was "almost done" for three weeks. You\'re looking at the result of that psychological damage.',
     tags: ['React', 'Vite', 'CSS Modules', 'Existential Dread', 'Too Many Fonts', 'Perfectionism'],
     github: 'https://github.com/javiermfriedman/portfolio',
+    live: 'https://www.javierfriedman.com/',
     image: portfolioImg
   }
 ]
