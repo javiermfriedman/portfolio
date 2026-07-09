@@ -84,7 +84,7 @@ const SOCIAL_LINKS = [
   { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/javier-friedman-ab08112a9',                     Icon: LinkedInIcon,  external: true  },
   { label: 'Goodreads', href: 'https://www.goodreads.com/user/show/181135757-javi-friedman',                       Icon: GoodreadsIcon, external: true  },
   { label: 'Spotify',   href: 'https://open.spotify.com/user/javier.friedman85',               Icon: SpotifyIcon,   external: true  },
-  { label: 'Email',     href: 'mailto:hello@javiermfriedman.com',                            Icon: EmailIcon,     external: false },
+  { label: 'Email',      href: 'mailto:javiermfriedman@gmail.com',                            Icon: EmailIcon,     external: false },
 ]
 
 // ─── Text animation ────────────────────────────────────────────────────────
