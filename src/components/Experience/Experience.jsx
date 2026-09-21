@@ -20,7 +20,7 @@ import synaptecLogo from '../../assets/experience/synaptec_gs.webp'
 const SKILLS = [
   { category: 'Languages', items: ['Python', 'C++', 'JavaScript', 'SQL', 'Swift'] },
   { category: 'Frameworks & Libraries', items: ['React', 'Next.js', 'FastAPI', 'Django', 'LangChain / LangGraph', 'PyTorch', 'Pydantic', 'Pipecat'] },
-  { category: 'Infrastructure & DevOps', items: ['AWS (EC2, ECS, Fargate, S3, RDS)', 'VPC Networking', 'IAM', 'Docker', 'Git', 'CI/CD'] },
+  { category: 'Infrastructure & DevOps', items: ['AWS (EC2, ECS, Fargate, S3, RDS, Bedrock)', 'VPC Networking', 'IAM', 'Docker', 'Git', 'CI/CD'] },
   { category: 'Databases & Storage', items: ['PostgreSQL', 'MySQL','Supabase', 'FAISS', 'Redis'] },
 ]
 
@@ -32,11 +32,13 @@ const EXPERIENCE = [
     period: 'Jun 2026 – Present',
     location: 'New York, NY',
     logo: synaptecLogo,
-    // TODO: replace these placeholders with real responsibilities.
     bullets: [
-    'I am building [core product or system] from the ground up as a founding engineer.',
-    'I own [backend / AI pipeline / infrastructure] end to end, from design through production.',
-    'I work directly with [founders / early customers] to shape what gets built next.',
+    'As the sole Founding Engineer at Synaptec, I architected and built the company’s end-to-end neuropsychology platform, owning system architecture, backend, frontend, infrastructure, and deployment across FastAPI, React, PostgreSQL, AWS, and Render.',
+    'I designed the platform’s HIPAA-compliant architecture for sensitive clinical data and led security and compliance across the full stack, including BAAs with Render, AWS, Clerk, and Cal.com, along with secure PHI storage and role-based access controls.',
+    'I built and integrated the core clinical workflows spanning patient intake, scheduling through Cal.com, telehealth sessions, and neuropsychological assessments, with authentication handled by Clerk.',
+    'I built the AI-assisted report generation pipeline on Amazon Bedrock with Claude, converting raw evaluation data into structured draft reports that clinicians review and finalize.',
+    'I set up and operate the production infrastructure on Render and AWS, including S3 for secure storage of clinical files and session recordings, and own the deployment pipeline end to end.',
+    'I work directly with neuropsychologists and clinic staff, gathering feedback on the platform and turning it into product and engineering decisions.',
     ],
   },
   {
