@@ -50,6 +50,8 @@
   flex: 0 0 200px;
   position: sticky;
   top: 84px; /* navbar (64px) + 20px breathing room */
+  max-height: calc(100vh - 104px); /* stays readable on short viewports */
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -128,6 +130,7 @@
 
 .cardHeader {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
@@ -238,7 +241,7 @@
 
 /* ── Responsive ──────────────────────────────────────────────────────────── */
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .body {
     flex-direction: column;
     gap: 40px;
@@ -246,7 +249,27 @@
 
   .sidebar {
     position: static;
+    max-height: none;
+    overflow: visible;
     flex: none;
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardHeader {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cardRight {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .period,
+  .location {
+    white-space: normal;
   }
 }

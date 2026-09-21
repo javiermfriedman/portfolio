@@ -3,11 +3,11 @@ import styles from './Navbar.module.css'
 
 const NAV_LINKS = [
   { id: 'about',      label: 'About'      },
-  { id: 'projects',   label: 'Projects'   },
   { id: 'experience', label: 'Experience' },
+  { id: 'projects',   label: 'Projects'   },
 ]
 
-export default function Navbar({ activePage, onNavigate }) {
+export default function Navbar({ activePage }) {
   return (
     <motion.header
       className={styles.navbar}
@@ -19,13 +19,14 @@ export default function Navbar({ activePage, onNavigate }) {
 
       <nav className={styles.nav} aria-label="Main navigation">
         {NAV_LINKS.map(({ id, label }) => (
-          <button
+          <a
             key={id}
+            href={`#/${id}`}
             className={`${styles.link} ${activePage === id ? styles.linkActive : ''}`}
-            onClick={() => onNavigate(id)}
+            aria-current={activePage === id ? 'page' : undefined}
           >
             {label}
-          </button>
+          </a>
         ))}
       </nav>
     </motion.header>

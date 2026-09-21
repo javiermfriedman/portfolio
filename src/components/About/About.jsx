@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import styles from './About.module.css'
+import resumePdf from '../../assets/javier_friedman_resume.pdf'
 
 // ─── Social icons (inline SVG) ────────────────────────────────────────────
 
@@ -77,6 +78,15 @@ function SpotifyIcon() {
   )
 }
 
+function ResumeIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z
+        M8 12h8v1.5H8V12zm0 3.5h8V17H8v-1.5zm0-7h3V10H8V8.5z"/>
+    </svg>
+  )
+}
+
 // ─── Data ─────────────────────────────────────────────────────────────────
 
 const SOCIAL_LINKS = [
@@ -84,7 +94,8 @@ const SOCIAL_LINKS = [
   { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/javier-friedman-ab08112a9',                     Icon: LinkedInIcon,  external: true  },
   { label: 'Goodreads', href: 'https://www.goodreads.com/user/show/181135757-javi-friedman',                       Icon: GoodreadsIcon, external: true  },
   { label: 'Spotify',   href: 'https://open.spotify.com/user/javier.friedman85',               Icon: SpotifyIcon,   external: true  },
-  { label: 'Email',      href: 'mailto:javiermfriedman@gmail.com',                            Icon: EmailIcon,     external: false },
+  { label: 'Email',     href: 'mailto:javiermfriedman@gmail.com',                           Icon: EmailIcon,     external: false },
+  { label: 'Resume',    href: resumePdf,                                                    Icon: ResumeIcon,    external: false, download: 'Javier_Friedman_Resume.pdf' },
 ]
 
 // ─── Text animation ────────────────────────────────────────────────────────
@@ -119,8 +130,11 @@ export default function About() {
           <div className={styles.blobFrame}>
             <img
               className={styles.portraitImg}
-              src="/portrait.jpg"
+              src="/portrait.webp"
               alt="Javier Friedman"
+              width="640"
+              height="640"
+              decoding="async"
             />
           </div>
         </motion.div>
@@ -137,7 +151,7 @@ export default function About() {
           </motion.h1>
 
           <motion.p className={styles.bio} variants={textItem}>
-            Bonjour! I’m a Tufts-trained computer scientist based in Boston, focused on building applied AI products end-to-end. My background spans the full AI lifecycle, from working in the weeds of model training to shipping product as a full-stack engineer, with the occasional mobile project on the side. I thrive in fast-paced environments and enjoy building from scratch. Outside the terminal, I’m a New Yorker at heart (Go Knicks) who enjoys fantasy novels, skiing, spin classes, generating tracks on Suno, and making Spotify playlists.
+            Bonjour! I’m a Tufts-trained computer scientist based in New York, focused on building applied AI products end-to-end. My background spans the full AI lifecycle, from working in the weeds of model training to shipping product as a full-stack engineer, with the occasional mobile project on the side. I thrive in fast-paced environments and enjoy building from scratch. Outside the terminal, I’m a New Yorker at heart (Go Knicks) who enjoys fantasy novels, skiing, spin classes, generating tracks on Suno, and making Spotify playlists.
           </motion.p>
 
           <motion.nav
@@ -153,7 +167,7 @@ export default function About() {
                 aria-label={label}
                 title={label}
                 {...(download
-                  ? { download: true }
+                  ? { download }
                   : external
                   ? { target: '_blank', rel: 'noopener noreferrer' }
                   : {})}

@@ -7,7 +7,7 @@ import styles from './Experience.module.css'
 //   import startupLogo from '../../assets/experience/startup.png'
 // If `logo` is null a placeholder initial badge is shown instead.
 
-import sarviaLogo from '../../assets/experience/sarvia.png'
+import sarviaLogo from '../../assets/experience/sarvia.webp'
 import cpLogo from '../../assets/experience/cp_logo.png'
 import tuftsLogo from '../../assets/experience/tufts.png'
 import paviaLogo from '../../assets/experience/pavia.png'
@@ -15,7 +15,7 @@ import medicalLogo from '../../assets/experience/medical.png'
 import ihihLogo from '../../assets/experience/ihih.png'
 import uc3mLogo from '../../assets/experience/uc3m.png'
 import jumboLogo from '../../assets/experience/jumbo.png'
-import { p } from 'framer-motion/client'
+import synaptecLogo from '../../assets/experience/synaptec_gs.webp'
 
 const SKILLS = [
   { category: 'Languages', items: ['Python', 'C++', 'JavaScript', 'SQL', 'Swift'] },
@@ -26,10 +26,24 @@ const SKILLS = [
 
 const EXPERIENCE = [
   {
+    id: 'synaptec',
+    company: 'Synaptec',
+    role: 'Founding Engineer',
+    period: 'Jun 2026 – Present',
+    location: 'New York, NY',
+    logo: synaptecLogo,
+    // TODO: replace these placeholders with real responsibilities.
+    bullets: [
+    'I am building [core product or system] from the ground up as a founding engineer.',
+    'I own [backend / AI pipeline / infrastructure] end to end, from design through production.',
+    'I work directly with [founders / early customers] to shape what gets built next.',
+    ],
+  },
+  {
     id: 'startup',
     company: 'Sarvia AI',
     role: 'Software Engineer',
-    period: 'Jan 2026 – Present',
+    period: 'Sep 2025 – May 2026',
     location: 'Cambridge, MA',
     logo: sarviaLogo,
     bullets: [
@@ -45,12 +59,12 @@ const EXPERIENCE = [
     id: 'tufts',
     company: 'Tufts University',
     role: 'AI Research Assistant',
-    period: 'Sep 2025 – Present',
+    period: 'Aug 2025 – May 2026',
     location: 'Medford, MA',
     logo: tuftsLogo,
     bullets: [
-    'I collaborated with a faculty-led research team of PhD and graduate students at the Tufts Liulab to develop a benchmark for Seasonal-to-Subseasonal (S2S) extreme weather prediction.',
-    'I engineered a high-dimensional ETL pipeline in Python using Xarray and Dask to process 63 years (1960–2023) of global geospatial climate data, producing standardized datasets for downstream deep learning workflows.',
+    'I collaborated with a faculty-led research team of PhD and graduate students at the Liu Lab at Tufts to develop a benchmark for Subseasonal-to-Seasonal (S2S) extreme weather prediction.',
+    'I engineered a high-dimensional ETL pipeline in Python using Xarray and Dask to process 64 years (1960–2023) of global geospatial climate data, producing standardized datasets for downstream deep learning workflows.',
     'I validated label integrity through spatiotemporal analysis, benchmarking extreme-event labels against historical meteorological records and quantifying correspondence via Precision, Recall, and F1-score metrics.',
     'I leveraged the Tufts High-Performance Computing (HPC) cluster to execute large-scale, GPU-accelerated parallel computations.',
     ],
@@ -59,11 +73,11 @@ const EXPERIENCE = [
     id: 'cp',
     company: 'Core Perform',
     role: 'AI Engineer Intern',
-    period: 'Aug 2025 – Dec 2025',
+    period: 'Jun 2025 – Sep 2025',
     location: 'Medford, MA',
     logo: cpLogo,
     bullets: [
-    'As an AI Engineer Intern at Core Perform, I worked alongside the other interns to develop and deploy a suite of RAG agents that automated client onboarding, personalized plan generation, weekly progress tracking, and offboarding, reducing manual operational workload for Core Perform’s coaches by over 500%.',
+    'As an AI Engineer Intern at Core Perform, I worked alongside the other interns to develop and deploy a suite of RAG agents that automated client onboarding, personalized plan generation, weekly progress tracking, and offboarding, cutting manual operational workload for Core Perform’s coaches to less than a fifth of what it was.',
     'I worked directly with internal teams, coaches, and clients to run pilots, gather feedback, and iteratively refine agent behavior to improve reliability in real-world use.',
     'I also led the design of the PostgreSQL schema, implementing B-tree indexing and query optimization to improve retrieval performance.',
     ],
@@ -72,32 +86,19 @@ const EXPERIENCE = [
     id: 'uc3m',
     company: 'Universidad Carlos III de Madrid',
     role: 'ML/AI Research Intern',
-    period: 'Jan 2025 – Aug 2025',
+    period: 'Jan 2025 – May 2025',
     location: 'Madrid, Spain',
     logo: uc3mLogo,
     bullets: [
     'At UC3M’s Machine Learning Lab, I collaborated with a professor on the development of DARE-DQ, a novel evaluation metric for offline reinforcement learning trajectories that combines episode reward with empirical state density to better assess policy quality.',
     'I designed, implemented, and fine-tuned deep learning architectures in PyTorch to learn compact low-dimensional representations of high-dimensional continuous state observations across diverse reinforcement learning environments.',
-    'I applied clustering methods, including K-Means, to latent state representations in order to identify and remove sparse or non-informative states, improving policy quality, training stability, and downstream agent performance.',
-    'This approach reduced training time by up to 7x across multiple OpenAI Gym Atari environments without materially compromising model accuracy or performance.',
-    ],
-  },
-  {
-    id: 'jumbo',
-    company: 'Jumbo Code',
-    role: 'Full-Stack Engineer',
-    period: 'Sep 2023 – May 2024',
-    location: 'Medford, MA',
-    logo: jumboLogo,
-    bullets: [
-    'As a full-stack engineer at Jumbo Code, I helped build a comprehensive internal website for a local nonprofit as part of the organization’s pro bono software initiative.',
-    'I collaborated with designers, developers, and project managers in an agile, sprint-based workflow to deliver cohesive, functional features on schedule.',
-    'I built and integrated features across a React frontend and Django backend, working in a shared Git-based codebase to support collaborative full-stack development.',
+    'I applied clustering methods, including K-Means, to latent state representations in order to identify and remove sparse or non-informative states, improving policy quality and training stability.',
+    'This approach cut training time to as little as one-seventh of baseline across multiple OpenAI Gym Atari environments while preserving policy quality.',
     ],
   },
   {
     id: 'pavia',
-    company: 'Pavia University',
+    company: 'University of Pavia',
     role: 'Data Science Fellow',
     period: 'Jun 2024 – Jul 2024',
     location: 'Pavia, Italy',
@@ -109,11 +110,24 @@ const EXPERIENCE = [
     ],
   },
   {
+    id: 'jumbo',
+    company: 'JumboCode',
+    role: 'Full-Stack Engineer',
+    period: 'Sep 2023 – May 2024',
+    location: 'Medford, MA',
+    logo: jumboLogo,
+    bullets: [
+    'As a full-stack engineer at JumboCode, I helped build a comprehensive internal website for a local nonprofit as part of the organization’s pro bono software initiative.',
+    'I collaborated with designers, developers, and project managers in an agile, sprint-based workflow to deliver cohesive, functional features on schedule.',
+    'I built and integrated features across a React frontend and Django backend, working in a shared Git-based codebase to support collaborative full-stack development.',
+    ],
+  },
+  {
     id: 'gb',
     company: 'Global Brigades',
     role: 'Volunteer Clinician',
     period: 'Jul 2023 – Aug 2023',
-    location: 'Pavia, Italy',
+    location: 'Panama',
     logo: medicalLogo,
     bullets: [
     'As a Volunteer Clinician in Panama with Global Brigades, I supported the delivery of healthcare services in a community clinic, working directly with patients and medical staff in a fast-paced, resource-constrained setting.',
@@ -123,7 +137,7 @@ const EXPERIENCE = [
   },
   {
     id: 'ihih',
-    company: 'Ice Hockey In Harlem',
+    company: 'Ice Hockey in Harlem',
     role: 'Volunteer Coach',
     period: 'Dec 2018 – Feb 2022',
     location: 'New York, NY',
@@ -173,12 +187,12 @@ export default function Experience() {
                   <div className={styles.cardLeft}>
                     <div className={styles.logo}>
                       {logo
-                        ? <img src={logo} alt={company} className={styles.logoImg} />
+                        ? <img src={logo} alt={company} className={styles.logoImg} width="40" height="40" loading="lazy" decoding="async" />
                         : <span className={styles.logoInitial}>{company[0]}</span>
                       }
                     </div>
                     <div className={styles.cardMeta}>
-                      <span className={styles.company}>{company}</span>
+                      <h2 className={styles.company}>{company}</h2>
                       <span className={styles.role}>{role}</span>
                     </div>
                   </div>

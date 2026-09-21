@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import About from './components/About/About'
 import Projects from './components/Projects/Projects'
 import Experience from './components/Experience/Experience'
+import useHashRoute, { hasDeepLink } from './hooks/useHashRoute'
 import styles from './App.module.css'
 
 // ─── Inter-page transitions (About ↔ Projects ↔ Experience) ───────────────
@@ -19,13 +20,39 @@ const pageTransition = {
   ease: [0.25, 0.46, 0.45, 0.94],
 }
 
+// ─── Intro gating ─────────────────────────────────────────────────────────
+// The name intro plays once per tab session, and only when arriving at the
+// bare root URL. Deep links (#/projects), refreshes, and Back/Forward skip it.
+
+const INTRO_KEY = 'introSeen'
+
+function introAlreadySeen() {
+  try { return sessionStorage.getItem(INTRO_KEY) === '1' } catch { return false }
+}
+
+function markIntroSeen() {
+  try { sessionStorage.setItem(INTRO_KEY, '1') } catch { /* storage unavailable */ }
+}
+
 // ─── App ──────────────────────────────────────────────────────────────────
 
 export default function App() {
-  const [phase, setPhase]           = useState('landing') // 'landing' | 'site'
-  const [activePage, setActivePage] = useState('about')
+  const [phase, setPhase] = useState(() =>
+    introAlreadySeen() || hasDeepLink() ? 'site' : 'landing'
+  ) // 'landing' | 'site'
+  const activePage = useHashRoute()
 
-  const handleLandingComplete = useCallback(() => setPhase('site'), [])
+  const handleLandingComplete = useCallback(() => {
+    markIntroSeen()
+    setPhase('site')
+  }, [])
+
+  // Scroll reset happens *between* the outgoing page's fade-out and the incoming
+  // page's fade-in, while nothing is on screen. Resetting on hash change instead
+  // would visibly yank the old page to the top before it starts fading.
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [])
 
   return (
     <div className={styles.app}>
@@ -50,10 +77,10 @@ export default function App() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0, ease: 'easeOut' }}
           >
-            <Navbar activePage={activePage} onNavigate={setActivePage} />
+            <Navbar activePage={activePage} />
 
             <main className={styles.main}>
-              <AnimatePresence mode="wait">
+              <AnimatePresence mode="wait" onExitComplete={scrollToTop}>
 
                 {activePage === 'about' && (
                   <motion.div

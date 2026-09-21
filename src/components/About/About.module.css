@@ -50,6 +50,15 @@
   height: 100%;
   overflow: hidden;
   animation: blobMorph 11s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blobFrame {
+    animation: none;
+  }
+}
+
+.blobFrame {
 
   /* Dark editorial border that morphs with the shape */
   box-shadow: 0 0 0 3px rgba(26, 23, 20, 0.72);
@@ -84,7 +93,6 @@
   font-weight: 700;
   letter-spacing: 0.01em;
   line-height: 1.0;
-  white-space: nowrap;
   color: var(--fg);
   margin-bottom: clamp(28px, 4vh, 44px);
 }
@@ -157,6 +165,6 @@
 
 @media (max-width: 480px) {
   .name {
-    font-size: clamp(2.6rem, 11vw, 3.4rem);
+    font-size: clamp(1.9rem, 10vw, 3.4rem);
   }
 }
