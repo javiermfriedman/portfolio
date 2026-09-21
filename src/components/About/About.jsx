@@ -91,7 +91,7 @@ function ResumeIcon() {
 
 const SOCIAL_LINKS = [
   { label: 'GitHub',    href: 'https://github.com/javiermfriedman',                          Icon: GitHubIcon,    external: true  },
-  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/javier-friedman-ab08112a9',                     Icon: LinkedInIcon,  external: true  },
+  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/javier-friedman/',                     Icon: LinkedInIcon,  external: true  },
   { label: 'Goodreads', href: 'https://www.goodreads.com/user/show/181135757-javi-friedman',                       Icon: GoodreadsIcon, external: true  },
   { label: 'Spotify',   href: 'https://open.spotify.com/user/javier.friedman85',               Icon: SpotifyIcon,   external: true  },
   { label: 'Email',     href: 'mailto:javiermfriedman@gmail.com',                           Icon: EmailIcon,     external: false },
@@ -151,7 +151,7 @@ export default function About() {
           </motion.h1>
 
           <motion.p className={styles.bio} variants={textItem}>
-            Bonjour! I’m a Tufts-trained computer scientist based in New York, focused on building applied AI products end-to-end. My background spans the full AI lifecycle, from working in the weeds of model training to shipping product as a full-stack engineer, with the occasional mobile project on the side. I thrive in fast-paced environments and enjoy building from scratch. Outside the terminal, I’m a New Yorker at heart (Go Knicks) who enjoys fantasy novels, skiing, spin classes, generating tracks on Suno, and making Spotify playlists.
+            Bonjour! I’m a Tufts-trained computer scientist based in New York, focused on building applied AI products end-to-end. My background spans the full AI lifecycle, from working in the weeds of model training to shipping product as a full-stack engineer, with the occasional mobile project on the side. I thrive in fast-paced environments and enjoy building from scratch. Outside the terminal, I’m a die-hard Knicks fan who enjoys fantasy novels, skiing, yoga classes, generating tracks on Suno, and making Spotify playlists.
           </motion.p>
 
           <motion.nav
